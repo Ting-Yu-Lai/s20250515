@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width:devce-width, initial-scale=1.0">
+    <title>Flexbox pratice</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(./image/common_bg_light.jpg);
+        }
+
+        .item {
+            width: 300px;
+            height: 300px;
+            /* background-color: lightgray; */
+        }
+
+        .item1 {
+            display: flex;
+            width: 10%;
+            height: 5vh;
+            border-radius: 25px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item1-color a {
+            color: blue;
+        }
+
+        .item2-color a {
+            color: red;
+        }
+
+        .item3-color a {
+            color: green;
+        }
+
+        .item1 a {
+            text-decoration: none;
+            /* color: white */
+        }
+
+        .item:hover {
+            font-size: 24px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: auto;
+            width: 100%;
+            height: 10vh;
+            /* background: pink; */
+            position: fixed;
+            z-index: 9;
+        }
+
+        .container1 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: auto;
+            width: 100%;
+            height: 80vh;
+            /* background: pink; */
+        }
+
+        .container1-bgimg {
+            background-image: url(./image/characters_faction_base_01.png);
+            background-repeat: no-repeat;
+            position: relative;
+            background-size: 100%;
+            background-position-x: center;
+            background-position-y: center;
+
+        }
+
+
+        .item11-charimg {
+            
+            width: 300px;
+            height: 300px;
+            background-image: url(./image/container1_char1.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position-x: center;
+            background-position-y: center;
+            margin-left: 150px;
+            
+
+        }
+
+        .item12-charimg {
+            width: 300px;
+            height: 300px;
+            background-image: url(./image/container1_char2.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position-x: center;
+            background-position-y: center;
+        }
+
+        .item13-charimg {
+            width: 300px;
+            height: 300px;
+            background-image: url(./image/container1_char3.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position-x: center;
+            background-position-y: center;
+        }
+
+        .img-hover {
+            transition: 0.3 ease;
+        }
+
+        .img-hover:hover {
+            filter: brightness(1.3);
+        }
+
+        /* ------------------------------------------------------我是分割線---------------------------------------------------- */
+
+
+        .container2 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: auto;
+            width: 100%;
+            height: 50vh;
+            /* background: blue; */
+        }
+
+        .container2-bgimg {
+            background-image: url(./image/characters_faction_base_02.png);
+            background-repeat: no-repeat;
+            position: relative;
+            background-size: 100%;
+            background-position-x: center;
+            background-position-y: center;
+
+        }
+
+
+        .item21-charimg {
+            width: 300px;
+            height: 300px;
+            background-image: url(./image/container2_char1.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position-x: center;
+            background-position-y: center;
+            margin-left: 150px;
+        }
+
+        .item22-charimg {
+            width: 300px;
+            height: 300px;
+            background-image: url(./image/container2_char2.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position-x: center;
+            background-position-y: center;
+        }
+
+        .item23-charimg {
+            width: 300px;
+            height: 300px;
+            background-image: url(./image/container2_char3.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position-x: center;
+            background-position-y: center;
+        }
+
+        .img-hover {
+            transition: 0.3 ease;
+        }
+
+        .img-hover:hover {
+            filter: brightness(1.3);
+        }
+
+        /* ------------------------------------------------------我是分割線---------------------------------------------------- */
+
+        .container3 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: auto;
+            width: 100%;
+            height: 80vh;
+            /* background: pink; */
+        }
+
+        .container3-bgimg {
+            background-image: url(./image/characters_faction_base_03.png);
+            background-repeat: no-repeat;
+            position: relative;
+            background-size: 100%;
+            background-position-x: center;
+            background-position-y: center;
+
+        }
+
+
+        .item31-charimg {
+            width: 300px;
+            height: 300px;
+            background-image: url(./image/container3_char1.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position-x: center;
+            background-position-y: center;
+            margin-left: 150px;
+        }
+
+        .item32-charimg {
+            width: 300px;
+            height: 300px;
+            background-image: url(./image/container3_characters_2.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position-x: center;
+            background-position-y: center;
+        }
+
+        .item33-charimg {
+            width: 300px;
+            height: 300px;
+            background-image: url(./image/container3_char3.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position-x: center;
+            background-position-y: center;
+        }
+
+
+        .container4 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: auto;
+            width: 100%;
+            height: 130vh;
+            /* background: blue; */
+            background-image: url(./image/footer_bg.jpg);
+            background-repeat: no-repeat;
+        }
+
+        .footer {width: 80%;
+            height: 50vh;
+            background-image: url(./image/footer_logo_tch.png);
+            background-repeat: no-repeat;
+            z-index: 5;
+        }
+
+        .char-text {
+            position:absolute;
+            font-size: 32px;
+            color:white;
+            bottom: 18rem;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="nav">
+        <div class="item item1 item1-color">
+            <a href="#goContainer1">魏</a>
+        </div>
+        <div class="item item1 item2-color">
+            <a href="#goContainer2">吳</a>
+        </div>
+        <div class="item item1 item3-color">
+            <a href="#goContainer3">蜀</a>
+        </div>
+        <div class="item item1">
+            <a href="#goContainer4">頁尾</a>
+        </div>
+    </div>
+
+    <div id="goContainer1" class="container1 container1-bgimg">
+        <div class="item11-charimg img-hover">
+            <div class="char-text">夏侯惇</div>
+        </div>
+        <div class="item12-charimg img-hover"></div>
+        <div class="item13-charimg img-hover"></div>
+    </div>
+
+    <div id="goContainer2" class="container2 container2-bgimg">
+        <div class="item21-charimg img-hover"></div>
+        <div class="item22-charimg img-hover"></div>
+        <div class="item23-charimg img-hover"></div>
+    </div>
+
+    <div id="goContainer3" class="container3 container3-bgimg">
+        <div class="item31-charimg img-hover"></div>
+        <div class="item32-charimg img-hover"></div>
+        <div class="item33-charimg img-hover"></div>
+    </div>
+
+    <div id="goContainer4" class="container4">
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>
